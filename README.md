@@ -24,7 +24,7 @@ The frontend is built with React 19 + TypeScript + Tailwind CSS, the backend she
 - **Local LLM support** — Gemma-2B, 4B & Qwen-3.5 9B only (connects to llama.cpp server)
 - **Privacy-first** — all data stays on-device; no external API calls.
 - **Rich document handling** — read and chat with PDFs (`pdfjs-dist`), EPUBs (`epubjs`), and CSVs (`papaparse`)
-- **Markdown rendering** — full GFM support via `react-markdown` + `remark-gfm`, with syntax highlighting via `highlight.js`
+- **Markdown rendering** — `react-markdown` + `remark-gfm`, `highlight.js`
 - **Mermaid diagrams** — renders diagrams inline in chat responses
 - **PDF export** — export conversations to PDF with `jspdf`
 - **Radix UI primitives** — accessible dialogs, dropdowns, context menus, tabs...
