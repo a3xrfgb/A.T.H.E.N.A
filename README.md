@@ -34,7 +34,7 @@ The frontend is built with React 19 + TypeScript + Tailwind CSS, the backend she
 - **Radix UI primitives** — accessible dialogs, dropdowns, context menus, tabs...
 - **Persistent storage** — SQLite database at `~/.athena/athena.db` via Tauri's Rust backend
 - **File system access** — native file dialogs and FS access via Tauri plugins
-- **Cross-platform** — Windows, macOS, and Linux via Tauri 2
+- **AI-Gallery** — NanoBanana Prompts, SORA, Midjourney
 
 ---
 
