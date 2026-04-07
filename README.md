@@ -161,17 +161,6 @@ Settings are persisted locally in the SQLite database at `~/.athena/athena.db`.
 
 ---
 
-## Roadmap
-
-- [ ] Multi-conversation sidebar with history search
-- [ ] Agent/tool-use support (function calling)
-- [ ] Voice input / TTS output
-- [ ] Plugin system for custom tools
-- [ ] Model benchmark & comparison view
-- [ ] Themes beyond dark-violet
-
----
-
 ## Contributing
 
 Contributions are welcome. Please open an issue first to discuss what you'd like to change, then submit a pull request against `main`.
