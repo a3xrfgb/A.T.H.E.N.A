@@ -1,4 +1,5 @@
 <div align="center">
+<img width="284" height="284" alt="Square284x284Logo" src="https://github.com/user-attachments/assets/4e79b89c-d181-4e33-ac64-c596b29b2281" />
 
 # A.T.H.E.N.A
 
