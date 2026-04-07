@@ -1,26 +1,16 @@
-<div align="center">
-
 # A.T.H.E.N.A
 
 **Adaptive Thinking & Heuristic Engine for Natural Assistance**
 
 A privacy-first, local-first AI desktop assistant built with Tauri 2, Rust, and React.
 
-[![License](https://img.shields.io/badge/license-Apache%202.0-blue.svg)](LICENSE)
-[![Tauri](https://img.shields.io/badge/Tauri-2.x-purple)](https://tauri.app)
-[![React](https://img.shields.io/badge/React-19-61DAFB?logo=react)](https://react.dev)
-[![TypeScript](https://img.shields.io/badge/TypeScript-5.8-3178C6?logo=typescript)](https://www.typescriptlang.org)
-[![Rust](https://img.shields.io/badge/Rust-stable-orange?logo=rust)](https://www.rust-lang.org)
-
-</div>
-
 ---
 
 ## Overview
 
-A.T.H.E.N.A is a cross-platform desktop AI chat application that runs entirely on your local machine. keeps your conversations, documents, and data fully under your control — no cloud required, no telemetry, no subscriptions.
+A.T.H.E.N.A is a cross-platform desktop AI chat application that runs entirely on your local machine. keeps your conversations, documents, and data fully under your control. no cloud required, no telemetry, no subscriptions.
 
-The frontend is built with React 19 + TypeScript + Tailwind CSS, the backend shell is Rust via Tauri 2, and state is managed with Zustand. The UI features a dark-first violet aesthetic with smooth Framer Motion animations.
+The frontend is built with React 19 + TypeScript + Tailwind CSS, the backend shell is Rust via Tauri 2, and state is managed with Zustand. 
 
 ---
 
