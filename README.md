@@ -1,3 +1,5 @@
+<div align="center">
+  
 # A.T.H.E.N.A
 
 **Adaptive Thinking & Heuristic Engine for Natural Assistance**
