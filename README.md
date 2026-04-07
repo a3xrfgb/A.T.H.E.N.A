@@ -21,13 +21,13 @@ The frontend is built with React 19 + TypeScript + Tailwind CSS, the backend she
 
 ## Features
 
-- **Local LLM support** — connects to llama.cpp server
+- **Local LLM support** — Gemma-2B, 4B & Qwen-3.5 9B only (connects to llama.cpp server)
 - **Privacy-first** — all data stays on-device; no external API calls.
 - **Rich document handling** — read and chat with PDFs (`pdfjs-dist`), EPUBs (`epubjs`), and CSVs (`papaparse`)
 - **Markdown rendering** — full GFM support via `react-markdown` + `remark-gfm`, with syntax highlighting via `highlight.js`
 - **Mermaid diagrams** — renders diagrams inline in chat responses
 - **PDF export** — export conversations to PDF with `jspdf`
-- **Radix UI primitives** — accessible dialogs, dropdowns, context menus, tabs, sliders, toasts
+- **Radix UI primitives** — accessible dialogs, dropdowns, context menus, tabs...
 - **Persistent storage** — SQLite database at `~/.athena/athena.db` via Tauri's Rust backend
 - **File system access** — native file dialogs and FS access via Tauri plugins
 - **Cross-platform** — Windows, macOS, and Linux via Tauri 2
@@ -59,7 +59,6 @@ The frontend is built with React 19 + TypeScript + Tailwind CSS, the backend she
   - **Windows**: Microsoft C++ Build Tools + WebView2
   - **macOS**: Xcode Command Line Tools
   - **Linux**: `libwebkit2gtk`, `libssl-dev`, and related packages
-- A running local LLM server (e.g. [LM Studio](https://lmstudio.ai) on port `1234` or [Ollama](https://ollama.com) on port `11434`)
 
 ---
 
@@ -78,15 +77,7 @@ cd A.T.H.E.N.A
 pnpm install
 ```
 
-### 3. Start your local LLM server
-
-**LM Studio** — load a model and start the local server (default: `http://localhost:1234/v1`)
-
-**Ollama** — run a model:
-```bash
-ollama run qwen2.5-coder:14b
-```
-Ollama's OpenAI-compatible endpoint is available at `http://localhost:11434/v1`.
+### 3. Downlaod the Model weights, llama.cpp files
 
 ### 4. Run in development mode
 
@@ -127,22 +118,6 @@ A.T.H.E.N.A/
 ├── tailwind.config.ts      # Tailwind configuration
 └── package.json
 ```
-
----
-
-## Configuration
-
-On first launch, open **Settings** inside the app and configure:
-
-| Setting | Description | Default |
-|---|---|---|
-| API Base URL | Your local inference server endpoint | `http://localhost:1234/v1` |
-| Model | Model ID to use for completions | depends on server |
-| System Prompt | Global system instructions | (optional) |
-| Temperature | Sampling temperature | `0.7` |
-| Max Tokens | Max tokens per response | `2048` |
-
-Settings are persisted locally in the SQLite database at `~/.athena/athena.db`.
 
 ---
 
