@@ -12,6 +12,9 @@ dist
 dist-ssr
 *.local
 
+# Rust / Tauri build output (never commit)
+src-tauri/target
+
 # Secrets and local env (keep .env.example tracked if you add one)
 .env
 .env.*
