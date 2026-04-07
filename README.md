@@ -1,16 +1,19 @@
 <div align="center">
-  
+
 # A.T.H.E.N.A
 
 **Adaptive Thinking & Heuristic Engine for Natural Assistance**
 
 A privacy-first, local-first AI desktop assistant built with Tauri 2, Rust, and React.
 
+
+</div>
+
 ---
 
 ## Overview
 
-A.T.H.E.N.A is a cross-platform desktop AI chat application that runs entirely on your local machine. keeps your conversations, documents, and data fully under your control. no cloud required, no telemetry, no subscriptions.
+A.T.H.E.N.A is a cross-platform desktop AI chat application that runs entirely on your local machine. compatible local inference with Llama.cpp server and keeps your conversations, documents, and data fully under your control. no cloud required, no telemetry, no subscriptions.
 
 The frontend is built with React 19 + TypeScript + Tailwind CSS, the backend shell is Rust via Tauri 2, and state is managed with Zustand. 
 
@@ -152,6 +155,7 @@ Settings are persisted locally in the SQLite database at `~/.athena/athena.db`.
   - [Tailwind CSS IntelliSense](https://marketplace.visualstudio.com/items?itemName=bradlc.vscode-tailwindcss)
 
 ---
+
 
 ## Contributing
 
