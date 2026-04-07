@@ -21,8 +21,8 @@ The frontend is built with React 19 + TypeScript + Tailwind CSS, the backend she
 
 ## Features
 
-- **Local LLM support** — connects to any OpenAI-compatible endpoint (LM Studio, Ollama, etc.)
-- **Privacy-first** — all data stays on-device; no external API calls unless you configure one
+- **Local LLM support** — connects to llama.cpp server
+- **Privacy-first** — all data stays on-device; no external API calls.
 - **Rich document handling** — read and chat with PDFs (`pdfjs-dist`), EPUBs (`epubjs`), and CSVs (`papaparse`)
 - **Markdown rendering** — full GFM support via `react-markdown` + `remark-gfm`, with syntax highlighting via `highlight.js`
 - **Mermaid diagrams** — renders diagrams inline in chat responses
