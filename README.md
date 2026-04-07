@@ -18,7 +18,7 @@ A privacy-first, local-first AI desktop assistant built with Tauri 2, Rust, and 
 
 ## Overview
 
-A.T.H.E.N.A is a cross-platform desktop AI chat application that runs entirely on your local machine. It connects to any OpenAI-compatible local inference server (LM Studio, Ollama, etc.) and keeps your conversations, documents, and data fully under your control — no cloud required, no telemetry, no subscriptions.
+A.T.H.E.N.A is a cross-platform desktop AI chat application that runs entirely on your local machine. keeps your conversations, documents, and data fully under your control — no cloud required, no telemetry, no subscriptions.
 
 The frontend is built with React 19 + TypeScript + Tailwind CSS, the backend shell is Rust via Tauri 2, and state is managed with Zustand. The UI features a dark-first violet aesthetic with smooth Framer Motion animations.
 
