@@ -1,0 +1,478 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+  --app-bg: #f4f4f5;
+  --app-surface: #ffffff;
+  --app-text: #18181b;
+  --app-muted: #71717a;
+  --app-border: #e4e4e7;
+  --sidebar-bg: #f0f0f2;
+  --sidebar-text: #18181b;
+  --sidebar-muted: #71717a;
+  --sidebar-border: #e4e4e7;
+  --sidebar-hover: rgba(0, 0, 0, 0.05);
+  --sidebar-active: rgba(0, 0, 0, 0.08);
+  --sidebar-footer: #e8e8ec;
+  --sidebar-input-bg: #ffffff;
+  --sidebar-input-border: #d4d4d8;
+  --sidebar-kbd-bg: rgba(255, 255, 255, 0.75);
+  --sidebar-kbd-border: rgba(0, 0, 0, 0.1);
+  --dropdown-bg: #ffffff;
+  --dropdown-text: #18181b;
+  --dropdown-border: #e4e4e7;
+  --dropdown-hover: rgba(0, 0, 0, 0.06);
+  --dropdown-danger: #dc2626;
+  --dropdown-separator: rgba(0, 0, 0, 0.08);
+  --scrollbar-thumb: rgba(0, 0, 0, 0.22);
+  --scrollbar-thumb-hover: rgba(0, 0, 0, 0.38);
+  /* ChatGPT-like input well: light gray, distinct from page bg */
+  --chat-composer-bg: #f4f4f4;
+  --chat-composer-send-bg: #c4c4c8;
+  --chat-composer-send-fg: #141414;
+  --chat-composer-toolbar-hover: rgba(0, 0, 0, 0.06);
+  /* Settings modal (LM Studio–style nav) */
+  /* Settings modal nav: match main canvas (--app-surface) */
+  --settings-sidebar-bg: #ffffff;
+  --settings-nav-section: #737373;
+  --settings-nav-text: #18181b;
+  --settings-nav-hover: rgba(0, 0, 0, 0.06);
+}
+
+html.dark {
+  color-scheme: dark;
+  --app-bg: #0d0d0f;
+  --app-surface: #18181c;
+  --app-text: #f0f0f5;
+  --app-muted: #6b6b80;
+  --app-border: rgba(255, 255, 255, 0.08);
+  --sidebar-bg: #1a1a1f;
+  --sidebar-text: #ececf1;
+  --sidebar-muted: #9b9baa;
+  --sidebar-border: rgba(255, 255, 255, 0.1);
+  --sidebar-hover: rgba(255, 255, 255, 0.06);
+  --sidebar-active: rgba(255, 255, 255, 0.1);
+  --sidebar-footer: #141418;
+  --sidebar-input-bg: #24252c;
+  --sidebar-input-border: rgba(255, 255, 255, 0.12);
+  --sidebar-kbd-bg: rgba(255, 255, 255, 0.06);
+  --sidebar-kbd-border: rgba(255, 255, 255, 0.12);
+  --dropdown-bg: #2a2a2e;
+  --dropdown-text: #ececf1;
+  --dropdown-border: rgba(255, 255, 255, 0.1);
+  --dropdown-hover: rgba(255, 255, 255, 0.08);
+  --dropdown-danger: #f87171;
+  --dropdown-separator: rgba(255, 255, 255, 0.1);
+  --scrollbar-thumb: rgba(255, 255, 255, 0.2);
+  --scrollbar-thumb-hover: rgba(255, 255, 255, 0.35);
+  /* Dark mode: slightly elevated gray (ChatGPT-like composer strip) */
+  --chat-composer-bg: #303030;
+  --chat-composer-send-bg: #676767;
+  --chat-composer-send-fg: #0a0a0a;
+  --chat-composer-toolbar-hover: rgba(255, 255, 255, 0.08);
+  --settings-sidebar-bg: #18181c;
+  --settings-nav-section: #9b9baa;
+  --settings-nav-text: #ececf1;
+  --settings-nav-hover: rgba(255, 255, 255, 0.08);
+}
+
+/* Root font size scales ALL Tailwind `rem`-based text (text-sm, text-base, etc.) app-wide. */
+html {
+  height: 100%;
+  background: transparent;
+  font-size: calc(16px * var(--font-size-scale, 1));
+}
+
+body {
+  margin: 0;
+  min-height: 100%;
+  height: 100%;
+  background: transparent;
+  color: var(--app-text);
+  font-weight: var(--font-weight-body, 400);
+}
+
+
+/* Warm / tinted light themes */
+html[data-theme="cream"] {
+  --app-bg: #f5f0e8;
+  --app-surface: #faf6ef;
+  --app-text: #1c1917;
+  --app-muted: #78716c;
+  --sidebar-bg: #ede8df;
+  --chat-composer-bg: #ebe8e0;
+}
+html[data-theme="beige"] {
+  --app-bg: #ebe4d8;
+  --app-surface: #f2ebe0;
+  --app-text: #292524;
+  --sidebar-bg: #e0d8ca;
+  --chat-composer-bg: #e0d9cc;
+}
+html[data-theme="rose"] {
+  --app-bg: #fdf2f4;
+  --app-surface: #ffffff;
+  --app-text: #1f2937;
+  --sidebar-bg: #fce7ed;
+  --chat-composer-bg: #f0e6ec;
+}
+
+/* Dark variants (html.dark + data-theme) — palettes: four brand hexes per theme (order 1→4). */
+html.dark[data-theme="slate"] {
+  --theme-1: #e4e6f3;
+  --theme-2: #2b40f5;
+  --theme-3: #0f112a;
+  --theme-4: #000000;
+  --app-bg: var(--theme-4);
+  --app-surface: var(--theme-3);
+  --sidebar-bg: color-mix(in srgb, var(--theme-2) 24%, var(--theme-4));
+  --app-border: color-mix(in srgb, var(--theme-1) 14%, var(--theme-4));
+}
+html.dark[data-theme="ocean"] {
+  --theme-1: #37aff7;
+  --theme-2: #abd8ea;
+  --theme-3: #2f97ef;
+  --theme-4: #000000;
+  --app-bg: var(--theme-4);
+  --app-surface: color-mix(in srgb, var(--theme-3) 30%, var(--theme-4));
+  --sidebar-bg: color-mix(in srgb, var(--theme-1) 20%, var(--theme-4));
+  --app-border: color-mix(in srgb, var(--theme-2) 16%, var(--theme-4));
+}
+html.dark[data-theme="forest"] {
+  --theme-1: #ebfff6;
+  --theme-2: #27eaa6;
+  --theme-3: #d0ff71;
+  --theme-4: #193133;
+  --app-bg: var(--theme-4);
+  --app-surface: color-mix(in srgb, var(--theme-2) 22%, var(--theme-4));
+  --sidebar-bg: color-mix(in srgb, var(--theme-3) 14%, var(--theme-4));
+  --app-border: color-mix(in srgb, var(--theme-1) 12%, var(--theme-4));
+}
+
+@keyframes chat-message-rotate-in {
+  from {
+    transform: rotate(-2.5deg) translateY(8px);
+    opacity: 0;
+  }
+  to {
+    transform: rotate(0deg) translateY(0);
+    opacity: 1;
+  }
+}
+
+.chat-message-style-rotate {
+  animation: chat-message-rotate-in 0.5s ease-out both;
+}
+
+#root {
+  min-height: 100%;
+  height: 100%;
+  font-size: inherit;
+}
+
+/* Notes: single-pane writing canvas (Markdown source, document-style) */
+.note-writing-canvas {
+  caret-color: #7c6af7;
+}
+
+/* Used for the preview layer behind the textarea. We don't want scrollbars here. */
+.note-preview-scroll {
+  scrollbar-width: none;
+}
+.note-preview-scroll::-webkit-scrollbar {
+  display: none;
+  width: 0;
+  height: 0;
+}
+
+/* First-launch onboarding modal: scroll without visible bars (overrides global * scrollbar rules). */
+.first-launch-onboarding-dialog {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  scrollbar-color: transparent transparent;
+}
+.first-launch-onboarding-dialog::-webkit-scrollbar {
+  display: none;
+  width: 0 !important;
+  height: 0 !important;
+}
+.first-launch-onboarding-dialog::-webkit-scrollbar-corner {
+  display: none;
+  width: 0;
+  height: 0;
+}
+
+/* Extra scrollbar tuning for the Notes canvas (remove arrow buttons). */
+.note-writing-canvas::-webkit-scrollbar-button {
+  display: none;
+  width: 0;
+  height: 0;
+}
+.note-writing-canvas::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+/* Minimal scrollbars: no arrow buttons (WebKit), thin thumb */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--scrollbar-thumb) transparent;
+}
+
+*::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+*::-webkit-scrollbar-button,
+*::-webkit-scrollbar-button:start:decrement,
+*::-webkit-scrollbar-button:end:increment {
+  display: none;
+  width: 0;
+  height: 0;
+}
+
+*::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: var(--scrollbar-thumb);
+  border-radius: 9999px;
+  border: 2px solid transparent;
+  background-clip: padding-box;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+  background-color: var(--scrollbar-thumb-hover);
+}
+
+*::-webkit-scrollbar-corner {
+  background: transparent;
+}
+
+/* Code block chrome lives on components (chat: light surface; notes: dark wrapper). */
+.hljs {
+  border-radius: 8px;
+}
+
+@keyframes shimmer {
+  0% {
+    opacity: 0.4;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.4;
+  }
+}
+
+.animate-shimmer {
+  animation: shimmer 1.2s ease-in-out infinite;
+}
+
+@keyframes athena-settings-cog-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.athena-settings-cog {
+  animation: athena-settings-cog-spin 1.3s infinite ease;
+  transform-origin: 50% 50%;
+}
+
+/* -------------------------------------------------------------------------- */
+/* Assistant chat markdown — readable spacing, lists, tables, inline code    */
+/* (Claude-like presentation for any model; structure still comes from the     */
+/* model’s Markdown; this layer only styles rendered output.)                  */
+/* -------------------------------------------------------------------------- */
+.athena-assistant-markdown {
+  font-size: 0.9375rem;
+  line-height: 1.68;
+  letter-spacing: 0.01em;
+  color: var(--app-text);
+  text-wrap: pretty;
+  overflow-x: auto;
+}
+
+.athena-assistant-markdown > *:first-child {
+  margin-top: 0 !important;
+}
+
+.athena-assistant-markdown p {
+  margin: 0.95em 0;
+}
+
+.athena-assistant-markdown h1,
+.athena-assistant-markdown h2,
+.athena-assistant-markdown h3,
+.athena-assistant-markdown h4 {
+  color: var(--app-text);
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  scroll-margin-top: 0.75rem;
+}
+
+.athena-assistant-markdown h1 {
+  margin: 1.85rem 0 0.65rem;
+  font-size: 1.35rem;
+  line-height: 1.35;
+}
+
+.athena-assistant-markdown h2 {
+  margin: 1.6rem 0 0.55rem;
+  font-size: 1.2rem;
+  line-height: 1.35;
+  padding-bottom: 0.4rem;
+  border-bottom: 1px solid var(--app-border);
+}
+
+.athena-assistant-markdown h3 {
+  margin: 1.35rem 0 0.45rem;
+  font-size: 1.0625rem;
+  line-height: 1.4;
+}
+
+.athena-assistant-markdown h4 {
+  margin: 1.1rem 0 0.35rem;
+  font-size: 1rem;
+}
+
+.athena-assistant-markdown ul,
+.athena-assistant-markdown ol {
+  margin: 0.9rem 0;
+  padding-left: 1.35rem;
+}
+
+.athena-assistant-markdown li {
+  margin: 0.5em 0;
+  line-height: 1.62;
+}
+
+.athena-assistant-markdown li > p {
+  margin: 0.4em 0;
+}
+
+.athena-assistant-markdown ul ul,
+.athena-assistant-markdown ol ol,
+.athena-assistant-markdown ul ol,
+.athena-assistant-markdown ol ul {
+  margin: 0.4rem 0;
+}
+
+html.dark .athena-assistant-markdown ul li::marker {
+  color: #a1a1aa;
+}
+
+html:not(.dark) .athena-assistant-markdown ul li::marker {
+  color: #71717a;
+}
+
+.athena-assistant-markdown strong {
+  font-weight: 600;
+  color: var(--app-text);
+}
+
+.athena-assistant-markdown blockquote {
+  margin: 1.1rem 0;
+  padding: 0.4rem 0 0.4rem 1rem;
+  border-left: 3px solid var(--app-border);
+  border-radius: 0 0.25rem 0.25rem 0;
+  background: rgba(0, 0, 0, 0.035);
+}
+
+html.dark .athena-assistant-markdown blockquote {
+  background: rgba(255, 255, 255, 0.04);
+  border-left-color: rgba(255, 255, 255, 0.16);
+}
+
+.athena-assistant-markdown hr {
+  margin: 1.85rem 0;
+  border: none;
+  border-top: 1px solid var(--app-border);
+}
+
+.athena-assistant-markdown a {
+  color: #2563eb;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+html.dark .athena-assistant-markdown a {
+  color: #7ab8ff;
+}
+
+/* GFM tables: mostly horizontal rules (no vertical cell borders) */
+.athena-assistant-markdown table {
+  width: 100%;
+  min-width: 280px;
+  border-collapse: collapse;
+  font-size: 0.875rem;
+  margin: 1.2rem 0;
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+
+html:not(.dark) .athena-assistant-markdown table {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  background: rgba(255, 255, 255, 0.6);
+}
+
+html.dark .athena-assistant-markdown table {
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(22, 22, 26, 0.95);
+}
+
+.athena-assistant-markdown thead th {
+  font-weight: 600;
+  text-align: left;
+  padding: 0.55rem 0.85rem;
+  border-bottom: 1px solid var(--app-border);
+}
+
+html.dark .athena-assistant-markdown thead th {
+  background: rgba(255, 255, 255, 0.06);
+  border-bottom-color: rgba(255, 255, 255, 0.12);
+}
+
+.athena-assistant-markdown tbody td {
+  padding: 0.55rem 0.85rem;
+  vertical-align: top;
+  border-left: none;
+  border-right: none;
+}
+
+html:not(.dark) .athena-assistant-markdown tbody tr:not(:last-child) td {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.07);
+}
+
+html.dark .athena-assistant-markdown tbody tr:not(:last-child) td {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+/* Inline code — soft rose/salmon pill (dark + light) */
+.athena-assistant-markdown :not(pre) > code {
+  font-family: ui-monospace, "JetBrains Mono", SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-size: 0.84em;
+  font-weight: 500;
+  padding: 0.12em 0.42em;
+  border-radius: 0.35rem;
+}
+
+html:not(.dark) .athena-assistant-markdown :not(pre) > code {
+  background: rgba(244, 63, 94, 0.11);
+  color: rgb(136 19 55);
+}
+
+html.dark .athena-assistant-markdown :not(pre) > code {
+  background: rgba(251, 113, 133, 0.13);
+  color: rgb(254 211 218);
+  border: 1px solid rgba(251, 113, 133, 0.22);
+}

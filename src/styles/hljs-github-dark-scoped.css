@@ -1,0 +1,86 @@
+/* GitHub Dark for highlight.js, scoped so chat can use github.css globally without clash. */
+.note-md-preview-root pre code.hljs {
+  display: block;
+  overflow-x: auto;
+  padding: 1em;
+}
+.note-md-preview-root code.hljs {
+  padding: 3px 5px;
+}
+.note-md-preview-root .hljs {
+  color: #c9d1d9;
+  background: #0d1117;
+}
+.note-md-preview-root .hljs-doctag,
+.note-md-preview-root .hljs-keyword,
+.note-md-preview-root .hljs-meta .hljs-keyword,
+.note-md-preview-root .hljs-template-tag,
+.note-md-preview-root .hljs-template-variable,
+.note-md-preview-root .hljs-type,
+.note-md-preview-root .hljs-variable.language_ {
+  color: #ff7b72;
+}
+.note-md-preview-root .hljs-title,
+.note-md-preview-root .hljs-title.class_,
+.note-md-preview-root .hljs-title.class_.inherited__,
+.note-md-preview-root .hljs-title.function_ {
+  color: #d2a8ff;
+}
+.note-md-preview-root .hljs-attr,
+.note-md-preview-root .hljs-attribute,
+.note-md-preview-root .hljs-literal,
+.note-md-preview-root .hljs-meta,
+.note-md-preview-root .hljs-number,
+.note-md-preview-root .hljs-operator,
+.note-md-preview-root .hljs-variable,
+.note-md-preview-root .hljs-selector-attr,
+.note-md-preview-root .hljs-selector-class,
+.note-md-preview-root .hljs-selector-id {
+  color: #79c0ff;
+}
+.note-md-preview-root .hljs-regexp,
+.note-md-preview-root .hljs-string,
+.note-md-preview-root .hljs-meta .hljs-string {
+  color: #a5d6ff;
+}
+.note-md-preview-root .hljs-built_in,
+.note-md-preview-root .hljs-symbol {
+  color: #ffa657;
+}
+.note-md-preview-root .hljs-comment,
+.note-md-preview-root .hljs-code,
+.note-md-preview-root .hljs-formula {
+  color: #8b949e;
+}
+.note-md-preview-root .hljs-name,
+.note-md-preview-root .hljs-quote,
+.note-md-preview-root .hljs-selector-tag,
+.note-md-preview-root .hljs-selector-pseudo {
+  color: #7ee787;
+}
+.note-md-preview-root .hljs-subst {
+  color: #c9d1d9;
+}
+.note-md-preview-root .hljs-section {
+  color: #1f6feb;
+  font-weight: bold;
+}
+.note-md-preview-root .hljs-bullet {
+  color: #f2cc60;
+}
+.note-md-preview-root .hljs-emphasis {
+  color: #c9d1d9;
+  font-style: italic;
+}
+.note-md-preview-root .hljs-strong {
+  color: #c9d1d9;
+  font-weight: bold;
+}
+.note-md-preview-root .hljs-addition {
+  color: #aff5b4;
+  background-color: #033a16;
+}
+.note-md-preview-root .hljs-deletion {
+  color: #ffdcd7;
+  background-color: #67060c;
+}

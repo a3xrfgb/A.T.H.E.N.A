@@ -1,0 +1,78 @@
+/* GitHub Dark token colors for chat code blocks — only under .dark .athena-chat-code-surface (beats global github.css). */
+.dark .athena-chat-code-surface pre.hljs {
+  color: #c9d1d9;
+  background: transparent !important;
+}
+.dark .athena-chat-code-surface .hljs-doctag,
+.dark .athena-chat-code-surface .hljs-keyword,
+.dark .athena-chat-code-surface .hljs-meta .hljs-keyword,
+.dark .athena-chat-code-surface .hljs-template-tag,
+.dark .athena-chat-code-surface .hljs-template-variable,
+.dark .athena-chat-code-surface .hljs-type,
+.dark .athena-chat-code-surface .hljs-variable.language_ {
+  color: #ff7b72;
+}
+.dark .athena-chat-code-surface .hljs-title,
+.dark .athena-chat-code-surface .hljs-title.class_,
+.dark .athena-chat-code-surface .hljs-title.class_.inherited__,
+.dark .athena-chat-code-surface .hljs-title.function_ {
+  color: #d2a8ff;
+}
+.dark .athena-chat-code-surface .hljs-attr,
+.dark .athena-chat-code-surface .hljs-attribute,
+.dark .athena-chat-code-surface .hljs-literal,
+.dark .athena-chat-code-surface .hljs-meta,
+.dark .athena-chat-code-surface .hljs-number,
+.dark .athena-chat-code-surface .hljs-operator,
+.dark .athena-chat-code-surface .hljs-variable,
+.dark .athena-chat-code-surface .hljs-selector-attr,
+.dark .athena-chat-code-surface .hljs-selector-class,
+.dark .athena-chat-code-surface .hljs-selector-id {
+  color: #79c0ff;
+}
+.dark .athena-chat-code-surface .hljs-regexp,
+.dark .athena-chat-code-surface .hljs-string,
+.dark .athena-chat-code-surface .hljs-meta .hljs-string {
+  color: #a5d6ff;
+}
+.dark .athena-chat-code-surface .hljs-built_in,
+.dark .athena-chat-code-surface .hljs-symbol {
+  color: #ffa657;
+}
+.dark .athena-chat-code-surface .hljs-comment,
+.dark .athena-chat-code-surface .hljs-code,
+.dark .athena-chat-code-surface .hljs-formula {
+  color: #8b949e;
+}
+.dark .athena-chat-code-surface .hljs-name,
+.dark .athena-chat-code-surface .hljs-quote,
+.dark .athena-chat-code-surface .hljs-selector-tag,
+.dark .athena-chat-code-surface .hljs-selector-pseudo {
+  color: #7ee787;
+}
+.dark .athena-chat-code-surface .hljs-subst {
+  color: #c9d1d9;
+}
+.dark .athena-chat-code-surface .hljs-section {
+  color: #58a6ff;
+  font-weight: bold;
+}
+.dark .athena-chat-code-surface .hljs-bullet {
+  color: #f2cc60;
+}
+.dark .athena-chat-code-surface .hljs-emphasis {
+  color: #c9d1d9;
+  font-style: italic;
+}
+.dark .athena-chat-code-surface .hljs-strong {
+  color: #c9d1d9;
+  font-weight: bold;
+}
+.dark .athena-chat-code-surface .hljs-addition {
+  color: #aff5b4;
+  background-color: #033a16;
+}
+.dark .athena-chat-code-surface .hljs-deletion {
+  color: #ffdcd7;
+  background-color: #67060c;
+}
