@@ -2,7 +2,6 @@
   
 # A.T.H.E.N.A
 **Adaptive Thinking & Heuristic Engine for Natural Assistance**
-
 <img width="142" height="142" alt="Square142x142Logo" src="https://github.com/user-attachments/assets/4cee70d2-1943-41c7-9cb2-fdd935146010" />
 
 
