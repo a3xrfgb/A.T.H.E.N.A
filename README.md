@@ -11,6 +11,7 @@ A privacy-first, local-first AI desktop assistant built with Tauri 2, Rust, and 
 </div>
 
 ---
+![Dark](https://github.com/user-attachments/assets/f39d9f7f-e497-417b-91fc-c178796c9eb6)
 
 ## Overview
 
@@ -21,6 +22,8 @@ The frontend is built with React 19 + TypeScript + Tailwind CSS, the backend she
 ---
 
 ## Features
+![chat](https://github.com/user-attachments/assets/7c01c854-6d5b-46fb-9c04-5ba0708c7baa)
+![light](https://github.com/user-attachments/assets/d3c1aa8d-d88f-450d-8af4-f43185b8f315)
 
 - **Local LLM support** — Gemma-2B, 4B & Qwen-3.5 9B only (connects to llama.cpp server)
 - **Privacy-first** — all data stays on-device; no external API calls.
