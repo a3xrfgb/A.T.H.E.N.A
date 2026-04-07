@@ -4,7 +4,7 @@
 
 **Adaptive Thinking & Heuristic Engine for Natural Assistance**
 
-A privacy-first, local-first AI desktop assistant built with Tauri 2, Rust, and React.
+A privacy-first, local-first AI desktop assistant built with Tauri 2, Rust, and React. 100% FREE!!!
 
 
 </div>
@@ -15,7 +15,7 @@ A privacy-first, local-first AI desktop assistant built with Tauri 2, Rust, and 
 
 A.T.H.E.N.A is a cross-platform desktop AI chat application that runs entirely on your local machine. compatible local inference with Llama.cpp server and keeps your conversations, documents, and data fully under your control. no cloud required, no telemetry, no subscriptions.
 
-100% FREE!!! The frontend is built with React 19 + TypeScript + Tailwind CSS, the backend shell is Rust via Tauri 2, and state is managed with Zustand. 
+The frontend is built with React 19 + TypeScript + Tailwind CSS, the backend shell is Rust via Tauri 2, and state is managed with Zustand. 
 
 ---
 
