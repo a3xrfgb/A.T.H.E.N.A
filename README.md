@@ -152,7 +152,7 @@ Contributions are welcome. Please open an issue first to discuss what you'd like
 Distributed under the [Apache 2.0 License](LICENSE).
 
 ---
-<img width="960" height="234" alt="Cursor_logo svg" src="https://github.com/user-attachments/assets/ef97d2a7-dedf-445e-beb2-f9b5464c0c35" />
+<img width="1080" height="800" alt="cursor-logo-freelogovectors net_" src="https://github.com/user-attachments/assets/186a51da-da71-440d-80d4-480cbab4bd16" />
 
 <div align="center">
 Built with ❤️ using Cursor. Tauri · Rust · React · TypeScript
