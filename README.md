@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 # Tauri + React + Typescript
 
 This template should help get you started developing with Tauri, React and Typescript in Vite.
@@ -10,3 +11,7 @@ This template should help get you started developing with Tauri, React and Types
 # A.T.H.E.N.A
 Adaptive Thinking &amp; Heuristic Engine for Natural Assistance
 >>>>>>> origin/main
+=======
+# A.T.H.E.N.A
+Adaptive Thinking &amp; Heuristic Engine for Natural Assistance
+>>>>>>> b21ba85fe668173fc974652c08e3b63154d16091
